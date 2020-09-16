@@ -76,8 +76,8 @@ public class SetsExample {
         System.out.println("\n");
 
         //TreeSetModel
-        Set<Product> modelTreeSet = new TreeSet<>(list);
-
+        Set<Product> modelTreeSet = new TreeSet<>(Comparator.comparingInt(Product::getId));
+        modelTreeSet.addAll(list);
         for (Product str : modelTreeSet) {
             System.out.println("treeSetModel: " + str);
         }

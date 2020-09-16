@@ -48,12 +48,16 @@ public class Product {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return !super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Product)) return false;
+        Product that = (Product) o;
+        return Objects.equals(this.getId(), that.getId());
     }
 
     @Override
     public int hashCode() {
-        return getId().hashCode();
+        return Objects.hash(this.getId());
     }
 }
+

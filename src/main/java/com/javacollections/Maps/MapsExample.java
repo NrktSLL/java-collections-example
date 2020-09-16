@@ -14,6 +14,7 @@ public class MapsExample {
         Product test4 = new Product("test1", 2, true);
         Product test5 = new Product("test1", 2, true);
 
+
         List<Product> list = new LinkedList<>();
         Collections.addAll(list, test1, test2, test3, test4, test5);
 
